@@ -10,11 +10,19 @@ spec:
     repoURL: https://grafana.github.io/helm-charts
     chart: grafana
     targetRevision: 7.3.9
-
     helm:
       values: |
         service:
           type: ClusterIP
+
+        ingress:
+          enabled: true
+          ingressClassName: nginx
+          hosts:
+            - grafana.local
+          paths:
+            - path: /
+              pathType: Prefix
 
   destination:
     server: https://kubernetes.default.svc
@@ -24,3 +32,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
