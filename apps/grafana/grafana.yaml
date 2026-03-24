@@ -14,6 +14,11 @@ spec:
       values: |
         service:
           type: ClusterIP
+        grafana.ini:
+          server:
+            root_url: http://grafana.local:8080
+          branding:
+            app_title: "Grafana GitOps Lab"  
 
         ingress:
           enabled: true
