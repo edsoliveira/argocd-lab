@@ -10,6 +10,8 @@ spec:
     repoURL: https://github.com/edsoliveira/argocd-lab
     targetRevision: main
     path: .
+    directory:
+      recurse: true
 
   destination:
     server: https://kubernetes.default.svc
