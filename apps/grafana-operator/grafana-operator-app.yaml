@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/SEU-REPO/argocd-lab
+    repoURL: https://github.com/edsoliveira/argocd-lab
     targetRevision: HEAD
     path: apps/grafana-operator
 
