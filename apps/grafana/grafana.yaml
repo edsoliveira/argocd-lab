@@ -17,8 +17,7 @@ spec:
         grafana.ini:
           server:
             root_url: http://grafana.local:8080
-          branding:
-            app_title: "Grafana GitOps Lab"  
+          app_title: "Grafana GitOps Lab"  
 
         ingress:
           enabled: true
