@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-operator-instance
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/SEU-REPO/argocd-lab
+    targetRevision: HEAD
+    path: apps/grafana-operator
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
