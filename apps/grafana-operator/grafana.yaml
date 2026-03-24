@@ -8,7 +8,3 @@ spec:
     log:
       mode: console
       level: info
-
-  ingress:
-    enabled: true
-    hostname: grafana-op.local
