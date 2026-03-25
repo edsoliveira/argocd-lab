@@ -10,4 +10,4 @@ spec:
       level: info
     security:
       admin_user: admin
-      admin_password: admin123
+      admin_password: teste666
