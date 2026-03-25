@@ -3,6 +3,8 @@ kind: Grafana
 metadata:
   name: grafana-op
   namespace: monitoring
+  labels:
+    dashboards: grafana
 spec:
   config:
     log:
