@@ -1,0 +1,13 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: node-exporter
+  namespace: monitoring
+  labels:
+    dashboards: grafana
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: grafana
+
+  url: https://grafana.com/api/dashboards/1860/revisions/27/download
